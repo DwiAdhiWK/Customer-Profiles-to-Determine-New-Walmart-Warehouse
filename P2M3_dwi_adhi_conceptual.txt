@@ -1,0 +1,22 @@
+Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+NoSQL atau Not only database adalah jenis database yang berbeda dengan Database relational dimana berbentuk semistructured yang artinya data dapat menyimpat lebih dari satu nilai seperti list.
+
+Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+NoSQL digunakan untuk kebutuhan saja karena kecepatan query nya lebih cepet daripada relational database atau tempat penyimpanan nya terstruktur tapi data nya semi struktur.
+Relational Database Management System digunakan saat pengambangan database awal dimana konsistensi data dan integritas data perlu dijaga.
+
+Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+2 tools/platform dari NoSQL selain ElasticSearch adalah MongoDB dan dbt.
+MongoDB support geospatial yang berguna untuk tracking real-time dan pemetaan selain itu MongoDB menggunakan tipe data BSON yaitu Binary JSON yang bersifat lightweight dan cepat di query.
+dbt bersifat modular dan dapat memecahkan pipeline complex menjadi bagian-bagian kecil artinya debuging dan testing lebih mudah. 
+
+Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+Airflow adalah platform untuk scheduling dan pengembangan kode dan memonitor workflow secara batches contoh seperti di milestone 3, airflow akan 
+menjalankan fungsi load dari db, melakukan pembersihan data dan load data bersih ke ElasticSearch yang dilakukan di tanggal Sabtu tiap jam 9:10 sampai 9:30 setiap 10 menit.
+
+Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+Great Expectations adalah library python yang digunakan untuk validasi kolom agar nilai kolom memiliki nilai yang sesuai seperti kolom umur tidak boleh kurang dari 0.
+
+Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+Data dikumpul dulu sebelum  di process dimana ukuran volume data sangat banyak. Proses cleaning data juga repetitive dan perlu di otomatisasi dan jika size nya sudah giga hingga terabyte pandas sudah tidak bisa digunakan.
+Tools yang digunakan adalah Spark.

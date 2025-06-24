@@ -1,0 +1,44 @@
+===========================================
+PREFACE
+===========================================
+This program is aims to create tables and insert the dataset into a PostgreSQL database.
+
+
+===========================================
+URL DATASET
+===========================================
+https://www.kaggle.com/datasets/logiccraftbyhimanshi/walmart-customer-purchase-behavior-dataset/data
+
+===========================================
+Data Definition Language Syntax
+===========================================
+Defines the structure of the `table_m3`, specifying columns, data types, and constraints using `CREATE TABLE`.
+
+CREATE TABLE table_m3 (
+    customerID VARCHAR(50) PRIMARY KEY,
+    age INT,
+    gender VARCHAR(10),
+    city VARCHAR(40),
+    category VARCHAR(20),
+    productName VARCHAR(20),
+    purchaseDate DATE,
+    purchaseAmount FLOAT(10),
+    paymentMethod VARCHAR(20),
+    discountApplied BOOLEAN,
+    rating INT,
+	repeatCustomer BOOLEAN
+);
+
+===========================================
+Data Manipulation Language Syntax
+===========================================
+Inserts data from a CSV file into the `table_m3` using `COPY`.
+
+COPY table_m3(customerID, age, gender, city, category, productName, 
+                  purchaseDate, purchaseAmount, paymentMethod, discountApplied, rating, repeatCustomer)
+FROM '/tmp/data_raw.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
